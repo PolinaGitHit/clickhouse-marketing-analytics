@@ -14,9 +14,6 @@ build/
 output/
 !output/.gitkeep
 
-# Dataset (too large — use separate download or LFS)
-dataset/*.csv
-
 # IDE
 .vscode/
 .idea/
