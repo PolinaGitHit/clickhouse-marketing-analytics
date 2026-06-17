@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.env.local
+
+# Output artifacts
+output/
+!output/.gitkeep
+
+# Dataset (too large — use separate download or LFS)
+dataset/*.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Cursor AI agent internal files (not part of the project)
+AGENT_*.md
+Plan_CH.md
+index.md

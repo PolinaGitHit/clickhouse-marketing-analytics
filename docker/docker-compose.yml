@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    ports:
+      - "8127:8123"   # HTTP / REST API (на хосте 8127 — 8123-8126 заняты company-кластером)
+      - "9006:9000"   # Native TCP (на хосте 9006 — 9000-9003 заняты company-кластером)
+    volumes:
+      - ./clickhouse/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ch_data:/var/lib/clickhouse
+    environment:
+      CLICKHOUSE_DB: marketing
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: clickhouse
+
+volumes:
+  ch_data:
